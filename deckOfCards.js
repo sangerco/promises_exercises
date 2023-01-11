@@ -37,7 +37,7 @@ $( document ).ready(function() {
         });
 
     $newCard.on('click', function() {
-        axios.get(`${baseURL}/${deckId}/draw/`)
+        axios.get(`${baseURL}${deckId}/draw/`)
             .then(res => {
                 console.log(res.data)
                 cardGoesHere.innerHTML = `<img src=${res.data.cards[0].image}>`
